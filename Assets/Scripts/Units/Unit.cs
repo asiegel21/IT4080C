@@ -7,26 +7,23 @@ using UnityEngine.Events;
 
 public class Unit : NetworkBehaviour
 {
-    [SerializeField]
-    private Health health = null;
-
-    [SerializeField]
-    private UnitMovement unitMovement = null;
-
-    [SerializeField]
-    private Targeter targeter = null;
-
-    [SerializeField]
-    private UnityEvent onSelected = null;
-
-    [SerializeField]
-    private UnityEvent onDeselected = null;
+    [SerializeField] private int resourceCost = 10;
+    [SerializeField] private Health health = null;
+    [SerializeField] private UnitMovement unitMovement = null;
+    [SerializeField] private Targeter targeter = null;
+    [SerializeField] private UnityEvent onSelected = null;
+    [SerializeField] private UnityEvent onDeselected = null;
 
     public static event Action<Unit> ServerOnUnitSpawned;
     public static event Action<Unit> ServerOnUnitDespawned;
 
     public static event Action<Unit> AuthorityOnUnitSpawned;
     public static event Action<Unit> AuthorityOnUnitDespawned;
+
+    public int GetResourceCost()
+    {
+        return resourceCost;
+    }
 
 
     public UnitMovement GetUnitMovement()
@@ -38,6 +35,8 @@ public class Unit : NetworkBehaviour
     {
         return targeter;
     }
+
+
 
     #region Server
 
