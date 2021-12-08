@@ -53,9 +53,27 @@
     <UnityVersion>2020.3.24f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Combat\Targetable.cs" />
+    <Compile Include="Assets\Scripts\Networking\RTSNetworkManager.cs" />
+    <Compile Include="Assets\Scripts\Combat\Health.cs" />
     <Compile Include="Assets\Scripts\MyNetworkManager.cs" />
+    <Compile Include="Assets\Scripts\Units\UnitMovement.cs" />
+    <Compile Include="Assets\Scripts\Units\UnitCommandGiver.cs" />
+    <Compile Include="Assets\Scripts\Units\UnitFiring.cs" />
+    <Compile Include="Assets\Scripts\Units\UnitSelectionHandler.cs" />
+    <Compile Include="Assets\Scripts\Buildings\UnitSpawner.cs" />
+    <Compile Include="Assets\Scripts\Units\Unit.cs" />
+    <Compile Include="Assets\Scripts\Units\UnitProjectile.cs" />
+    <Compile Include="Assets\Scripts\Combat\Targeter.cs" />
     <Compile Include="Assets\Scripts\MyNetworkPlayer.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Networking\RTSPlayer.cs" />
+    <Compile Include="Assets\Scripts\Combat\HealthDisplay.cs" />
+    <Compile Include="Assets\Scripts\Buildings\UnitBase.cs" />
+    <Compile Include="Assets\Scripts\Buildings\GameOverHandler.cs" />
+    <Compile Include="Assets\Scripts\Menus\GameOverDisplay.cs" />
+    <Compile Include="Assets\Scripts\Cameras\FaceCamera.cs" />
+    <Compile Include="Assets\Scripts\Buildings\Building.cs" />
+    <Compile Include="Assets\Scripts\Buildings\BuildingButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
@@ -700,6 +718,9 @@
     </Reference>
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
